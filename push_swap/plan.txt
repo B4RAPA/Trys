@@ -1,0 +1,18 @@
+radix sort
+2 stacks a und b am start
+für radix sort aber theoretisch 10 von 0 - 9 notwendig.
+darf ich die erstellen und verwenden??
+
+
+
+stack in ein array überführen und dann sortieren 
+mittleren wert finden und aus dem stack alle werte die drunter sind nach b schieben
+wenn ein wert gefunden wurde der größer als der mittlere wert is dann (ist der untere wert kleiner dann rra)
+wenn nicht dann ra
+solange bis alle zahlen die drunter sind drüben sind
+
+das solange wiederholen bis nur 2 zahlen in a übrig sind
+dann von b nach a mit dem gleichen system überführen nur mit höheren zahlen
+aber quasi chunk weise also immer remembern wie viele zahlen pro mittleren wert überführt wurden um dadurch die sortierung zu bekommem
+
+dann ist fertig sortiert bombe
