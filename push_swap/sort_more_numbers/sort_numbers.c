@@ -1,14 +1,25 @@
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
-void sort_numbers(stack_a, stack_b, size)
+void sort_numbers(t_list *stack_a,t_list *stack_b, int size, char *arr)
 {
-	while (size > 5)
+	int	n;
+	int	i;
+	n = get_median(arr);
+	
+	i = 0;
+	while(i < size)
 	{
-		pa(stack_a, stack_b);
+		if (stack_a->value <= n)
+			pb(stack_a, stack_b);
+		else
+			ra(stack_a);
+		i++;
 	}
-	if (size <= 5)
-		sort_five(stack_a, stack_b);
+	//nochmal das ganze durchfuehren
+	//bis 2 oder 3 uebrig sind in stack_a
+	//dann rueckfuehrend das selbe machen mit groesser als der median
+	// 
 	
 }
 
-/*überführen des stacks in ein array wie geht das?*/
+//aufrufen von init_array mit sort_array und is_sorted. dann daraus die mittlere zahl nehmen und immer ueberfuehren. rekursiv?
