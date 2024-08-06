@@ -1,14 +1,16 @@
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 int main(int argc, char **argv)
 {
 	int stack_size;
-	t_node *stack_a;
-	t_node *stack_b;
-
+	t_list	*stack_a;
+	t_list	*stack_b;
+	char	*arr;
+	
 	if (argc == 1)
 		return (0);
 	stack_size = 0;
+	init_stack(argc, argv, stack_a);
 	while (stack_a)
 	{
 		stack_size++;
@@ -19,7 +21,10 @@ int main(int argc, char **argv)
 	if (stack_size > 3 && stack_size <= 5)
 		sort_five(stack_a, stack_b);
 	else if ( stack_size > 5 )
-		sort_stack(stack_a, stack_b, stack_size);
+	{	
+		arr = init_array(argc, argv);
+		sort_numbers(stack_a, stack_b, stack_size, arr);
+	}	
 }
 /*
 ausgabe
