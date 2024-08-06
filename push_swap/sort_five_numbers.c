@@ -1,7 +1,7 @@
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 //sind es 4 oder mehr zahlen in die main mit den zugehörigen aufrufen
-int check_stack(t_node *stack_a)
+int check_stack(t_list *stack_a)
 {
 	if (stack_a->value < stack_a->next->value
 		&& stack_a->next->value < stack_a->next->next->value
@@ -12,7 +12,7 @@ int check_stack(t_node *stack_a)
 		return (1);
 }
 
-void push_one(t_node *stack_a, t_node *stack_b)
+void push_one(t_list *stack_a, t_list *stack_b)
 {
 	pa(stack_a, stack_b);
 	sort_three_numbers(stack_a);
@@ -32,7 +32,7 @@ void push_one(t_node *stack_a, t_node *stack_b)
 	}
 }
 //der is glaube ich net vollständig
-void push_two(t_node *stack_a, t_node *stack_b)
+void push_two(t_list *stack_a, t_list *stack_b)
 {
 	pa(stack_a, stack_b);
 	pa(stack_a, stack_b);
@@ -59,9 +59,9 @@ void push_two(t_node *stack_a, t_node *stack_b)
 	}
 }
 
-void sort_five(t_node *stack_a, int stack_size)
+void sort_five(t_list *stack_a, int stack_size)
 {
-	t_node *stack_b;
+	t_list *stack_b;
 
 	if (stack_size == 4 )
 	{
@@ -77,4 +77,5 @@ void sort_five(t_node *stack_a, int stack_size)
 		push_two(stack_a, stack_b);
 	}
 }
+
 
