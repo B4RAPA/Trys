@@ -1,6 +1,7 @@
-#include "push_swap.h"
 
-int is_sorted(t_node* stack)
+#include "includes/push_swap.h"
+
+int is_sorted(t_list *stack)
 {
 	if ((stack->value < stack->next->value)//1 2 3
 		&& (stack->next->value < stack->prev->value))
@@ -25,7 +26,7 @@ int is_sorted(t_node* stack)
 		return (6);
 }
 
-void	sort_three_numbers(t_node **stack)
+void	sort_three_numbers(t_list **stack)
 {
 	if (stack_size(*stack) == 2 && (*stack)->value > (*stack)->next->value)
 	{
